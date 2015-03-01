@@ -1,0 +1,11 @@
+Package: rvisutils
+Type: Package
+Title: Some Useful R Visualization Functions
+Version: 0.1
+Date: 2015-02-28
+Author: c(
+    person("Sharon", "Machlis", , "smachlis@computerworld.com", c("aut", "cre")),
+    )
+Description: A few data visualization functions I've found useful over the years.
+License: GPL-3
+LazyData: TRUE
