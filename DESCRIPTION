@@ -7,5 +7,7 @@ Author: c(
     person("Sharon", "Machlis", , "smachlis@computerworld.com", c("aut", "cre")),
     )
 Description: A few data visualization functions I've found useful over the years.
+Imports:
+    corrplot
 License: GPL-3
 LazyData: TRUE
