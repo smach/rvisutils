@@ -13,9 +13,7 @@ binMax number, the maximum bin width for the histogram
 slideStep number, the increment the slider should change with each movement}
 }
 \description{
-Takes a basic ggvis histogram, which I typically create with
- ggvis(mydf, x = ~xcolumn, fill := "gray")
- and adds an interactive slider to control bin width.
+Takes a basic ggvis histogram and adds an interactive slider to control bin width.
 }
 \examples{
 initialHistogram <- ggvis(mtcars, x=~mpg, fill := "gray")

@@ -9,3 +9,10 @@ To install, you will need to have the devtools package on your system (if you do
 
 devtools::install_github("smach/rvisutils.R")
 ```
+
+To get a full listing of available functions and links to their help files, run
+
+``` r
+
+help(package="rvisutils")
+```

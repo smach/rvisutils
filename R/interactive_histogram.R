@@ -1,8 +1,6 @@
 #' interactive_histogram
 #'
-#' Takes a basic ggvis histogram, which I typically create with
-#'  ggvis(mydf, x = ~xcolumn, fill := "gray")
-#'  and adds an interactive slider to control bin width.
+#' Takes a basic ggvis histogram and adds an interactive slider to control bin width.
 #'
 #'  @param myBasicHistogram, a ggiv histogram such as ggvis(mydf, x = ~xcolumn, fill := "gray")
 #'  binMin number, the minimum bin width for the histogram
