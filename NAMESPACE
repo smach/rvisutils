@@ -2,4 +2,6 @@
 
 export(corrvis)
 export(df_to_xts)
+export(getparty)
+export(getpres)
 export(interactive_histogram)
