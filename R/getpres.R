@@ -9,36 +9,30 @@
 #' getpres(as.Date("2000-01-01"))
 
 getpres <- function(thedate){
-  thepres <- ""
-  if(thedate >= as.Date("1945-04-12") & thedate < as.Date("1953-01-20")){
-    thepres <- "Truman"}
-  if(thedate > as.Date("1953-01-21") & thedate < as.Date("1961-01-20")){
-    thepres <- "Eisenhower"
-  }
-  if (thedate > as.Date("1961-01-20") & thedate < as.Date("1963-11-22")) {
-    thepres <- "Kennedy"}
-  if (thedate > as.Date("1963-11-22") & thedate < as.Date("1969-01-20")) {
-    thepres <- "Johnson"}
-  if (thedate > as.Date("1969-01-20") & thedate < as.Date("1974-08-09")) {
-    thepres <- "Nixon"}
-  if (thedate > as.Date("1974-01-20") & thedate < as.Date("1977-01-20")) {
-    thepres <- "Ford"}
-  if (thedate > as.Date("1977-01-20") & thedate < as.Date("1981-01-20")) {
-    thepres <- "Carter"}
-  if (thedate > as.Date("1981-01-20") & thedate < as.Date("1989-01-20")) {
-    thepres <- "Reagan"}
-  if (thedate > as.Date("1989-01-20") & thedate < as.Date("1993-01-20")) {
-    thepres <- "George HW Bush"}
-  if (thedate > as.Date("1993-01-20") & thedate < as.Date("2001-01-20")) {
-    thepres <- "Clinton"}
-  if (thedate > as.Date("2001-01-01") & thedate < as.Date("2009-01-20")) {
-    thepres <- "George W Bush"}
-  if (thedate > as.Date("2009-01-01")) {
-    thepres <- "Obama"}
+  #help on StackOverflow to use cut() instead of nested if-else statements
+  # http://stackoverflow.com/questions/29053623/use-r-switch-for-less-than-or-greater-than
+  thepres <- cut(thedate,
+                 c(as.Date("1945-04-12"),
+                   as.Date("1953-01-21"),
+                   as.Date("1961-01-20"),
+                   as.Date("1963-11-22"),
+                   as.Date("1969-01-20"),
+                   as.Date("1974-01-20"),
+                   as.Date("1977-01-20"),
+                   as.Date("1981-01-20"),
+                   as.Date("1989-01-20"),
+                   as.Date("1993-01-20"),
+                   as.Date("2001-01-01"),
+                   as.Date("2009-01-01"),
+                   as.Date("2016-01-20")),
+                 labels=c("Truman","Eisenhower", "Kennedy", "Johnson",
+                          "Nixon", "Ford", "Carter", "Reagan", "George HW Bush",
+                          "Clinton", "George W Bush", "Obama"), right=F)
 
+  return(as.character(thepres))
 
-  return(thepres)
-} # end function
+}
+
 
 
 #' Get US President's Polical Party by Date
@@ -51,39 +45,33 @@ getpres <- function(thedate){
 #' @examples
 #' getparty(as.Date("2000-01-01"))
 
-getparty <- function(prez){
-  party <- ""
 
-  if(thedate >= as.Date("1945-04-12") & thedate < as.Date("1953-01-20")){
-    party <- "Democrat"}
-  if(thedate > as.Date("1953-01-21") & thedate < as.Date("1961-01-20")){
-    party <- "Republican"
-  }
-  if (thedate > as.Date("1961-01-20") & thedate < as.Date("1963-11-22")) {
-    party <- "Democrat"}
-  if (thedate > as.Date("1963-11-22") & thedate < as.Date("1969-01-20")) {
-    party <- "Democrat"}
-  if (thedate > as.Date("1969-01-20") & thedate < as.Date("1974-08-09")) {
-    party <- "Republican"}
-  if (thedate > as.Date("1974-01-20") & thedate < as.Date("1977-01-20")) {
-    party <- "Republican"}
-  if (thedate > as.Date("1977-01-20") & thedate < as.Date("1981-01-20")) {
-    party <- "Democrat"}
-  if (thedate > as.Date("1981-01-20") & thedate < as.Date("1989-01-20")) {
-    party <- "Republican"}
-  if (thedate > as.Date("1989-01-20") & thedate < as.Date("1993-01-20")) {
-    party <- "Republican"}
-  if (thedate > as.Date("1993-01-20") & thedate < as.Date("2001-01-20")) {
-    party <- "Democrat"}
-  if (thedate > as.Date("2001-01-01") & thedate < as.Date("2009-01-20")) {
-    party <- "Republican"}
-  if (thedate > as.Date("2009-01-01")) {
-    party <- "Democrat"}
+getparty <- function(thedate){
+  #help on StackOverflow to use cut() instead of nested if-else statements
+  # http://stackoverflow.com/questions/29053623/use-r-switch-for-less-than-or-greater-than
+  theparty <- cut(thedate,
+                 c(as.Date("1945-04-12"),
+                   as.Date("1953-01-21"),
+                   as.Date("1961-01-20"),
+                   as.Date("1963-11-22"),
+                   as.Date("1969-01-20"),
+                   as.Date("1974-01-20"),
+                   as.Date("1977-01-20"),
+                   as.Date("1981-01-20"),
+                   as.Date("1989-01-20"),
+                   as.Date("1993-01-20"),
+                   as.Date("2001-01-01"),
+                   as.Date("2009-01-01"),
+                   as.Date("2016-01-20")),
+                 labels=c("Democrat","Republican", "Democrat", "Democrat",
+                          "Republican", "Republican", "Democrat", "Republican", "Republican",
+                          "Democrat", "Republican", "Democrat"), right=F)
 
+  return(as.character(theparty))
 
-
-
-
-  return(party)
 }
+
+
+
+
 
