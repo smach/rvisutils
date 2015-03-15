@@ -4,7 +4,7 @@
 \alias{getparty}
 \title{Get US President's Polical Party by Date}
 \usage{
-getparty(prez)
+getparty(thedate)
 }
 \arguments{
 \item{thedate}{Any date on or after 1945-04-12 as an R Date object.}
