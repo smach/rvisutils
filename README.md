@@ -35,7 +35,7 @@ mydata %>%
 
 These can be saved to static images.
 
-*Complex static charts* -- ggplot2. There are lots of examples in the [ggplot2 documentation](http://docs.ggplot2.org/current/). Also see the [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/index.html) , the [R Graph Catalog](http://shinyapps.stat.ubc.ca/r-graph-catalog/). For info on tweaking graphs beyond the type, check [this cheat sheet](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/).
+**Complex static charts** -- ggplot2. There are lots of examples in the [ggplot2 documentation](http://docs.ggplot2.org/current/). Also see the [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/index.html) , the [R Graph Catalog](http://shinyapps.stat.ubc.ca/r-graph-catalog/). For info on tweaking graphs beyond the type, check [this cheat sheet](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/).
 
 Here's a sample grouped bar chart:
 
@@ -53,13 +53,13 @@ ggplot(cabbage_exp, aes(x=Date, y=Weight, fill=Cultivar)) +
 
 ![](README-unnamed-chunk-5-1.png)
 
-*Publish interactive versions of ggplot2 visualization on the Web* -- [plotly](https://plot.ly/ggplot2/).
+**Publish interactive versions of ggplot2 visualization on the Web** -- [plotly](https://plot.ly/ggplot2/).
 
-*Interactive HTML maps with points* -- [Leaflet for R](http://rstudio.github.io/leaflet/). There's more info on this in [my tutorial on useful new R packages](http://www.computerworld.com/article/2894448/useful-new-r-packages-for-data-visualization-and-analysis.html).
+**Interactive HTML maps with points** -- [Leaflet for R](http://rstudio.github.io/leaflet/). There's more info on this in [my tutorial on useful new R packages](http://www.computerworld.com/article/2894448/useful-new-r-packages-for-data-visualization-and-analysis.html).
 
-*Interactive HTML choropleth maps* -- [Leaflet for R](http://rstudio.github.io/leaflet/). Also check out out [Kyle Walker's tutorial](http://rpubs.com/walkerke/leaflet_choropleth), which includes reading in shape files and adding pop-ups.
+**Interactive HTML choropleth maps** -- [Leaflet for R](http://rstudio.github.io/leaflet/). Also check out out [Kyle Walker's tutorial](http://rpubs.com/walkerke/leaflet_choropleth), which includes reading in shape files and adding pop-ups.
 
-*Static choropleth map of US states/counties or world where proper projection is important* -- maps package with ggplot2 qplot. Example of US counties:
+**Static choropleth map of US states/counties or world where proper projection is important** -- maps package with ggplot2 qplot. Example of US counties:
 
 ``` r
 library(maps)
@@ -72,6 +72,6 @@ qplot(long, lat, data = counties, geom="polygon",
 
 ![](README-unnamed-chunk-6-1.png)
 
-*Exploratory static choropleth maps if projection isn't important* -- [choroplethr](https://github.com/trulia/choroplethr)
+**Exploratory static choropleth maps if projection isn't important** -- [choroplethr](https://github.com/trulia/choroplethr)
 
-*HTML time-series graphing* -- The [dygraphs package](http://rstudio.github.io/dygraphs/) is very easy to use. For converting data frames to xts objects, my rvisutils package's df\_to\_xts() function may be useful.
+**HTML time-series graphing** -- The [dygraphs package](http://rstudio.github.io/dygraphs/) is very easy to use. For converting data frames to xts objects, my rvisutils package's df\_to\_xts() function may be useful.

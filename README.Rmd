@@ -37,18 +37,16 @@ Other favorite R data visualizations not packaged as functions here, because the
 
 *HTML grouped bar chart* -- Check out the [rcdimple package](https://github.com/timelyportfolio/rcdimple). Here is sample code from @timelyportolio:
 
-```{r }
-library("rcdimple")
-library("gcookbook") # for data
-cabbage_exp %>%
-   dimple(
-     x = c("Date","Cultivar"), y = "Weight",
-     groups = "Cultivar", type = "bar", width = 590, height = 400
-   ) %>%
-   add_legend( x = 60, y = 10, width = 520, height = 20,
-     horizontalAlign = "left"
-   ) %>%
-   default_colors( rainbow(4) )
+```{r eval=FALSE}
+mydata %>%
++   dimple(
++     x = c("xAxisCategory","BarColor"), y = "value",
++     groups = "CarColor", type = "bar", width = 590, height = 400
++   ) %>%
++   add_legend( x = 60, y = 10, width = 520, height = 20,
++     horizontalAlign = "left"
++   ) %>%
++   default_colors( rainbow(4) )
 
 
 ```
@@ -68,6 +66,7 @@ ggplot(cabbage_exp, aes(x=Date, y=Weight, fill=Cultivar)) +
   # Adds labels on bars in white:
   geom_text(aes(label=Weight), vjust=1.5, colour="white",
   position=position_dodge(.9), size=3)
+
 
 ```
 
