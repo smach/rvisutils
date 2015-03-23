@@ -19,7 +19,9 @@ help(package="rvisutils")
 
 Other favorite R data visualizations not packaged as functions here, because the existing functions are more than enough:
 
-*HTML grouped bar chart* -- Check out the [rcdimple package](https://github.com/timelyportfolio/rcdimple). Here is sample code from @timelyportolio:
+**HTML time-series graphing** -- The [dygraphs package](http://rstudio.github.io/dygraphs/) is very easy to use. For converting data frames to xts objects, my rvisutils package's df\_to\_xts() function may be useful.
+
+**HTML grouped bar chart** -- Check out the [rcdimple package](https://github.com/timelyportfolio/rcdimple). Here is sample code from @timelyportolio:
 
 ``` r
 mydata %>%
@@ -37,7 +39,7 @@ These can be saved to static images.
 
 **Complex static charts** -- ggplot2. There are lots of examples in the [ggplot2 documentation](http://docs.ggplot2.org/current/). Also see the [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/index.html) , the [R Graph Catalog](http://shinyapps.stat.ubc.ca/r-graph-catalog/). For info on tweaking graphs beyond the type, check [this cheat sheet](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/).
 
-Here's a sample grouped bar chart:
+Here's a sample grouped bar chart with ggplot2:
 
 ``` r
 library(gcookbook)
@@ -73,5 +75,3 @@ qplot(long, lat, data = counties, geom="polygon",
 ![](README-unnamed-chunk-6-1.png)
 
 **Exploratory static choropleth maps if projection isn't important** -- [choroplethr](https://github.com/trulia/choroplethr)
-
-**HTML time-series graphing** -- The [dygraphs package](http://rstudio.github.io/dygraphs/) is very easy to use. For converting data frames to xts objects, my rvisutils package's df\_to\_xts() function may be useful.

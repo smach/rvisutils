@@ -7,7 +7,7 @@
 interactive_histogram(myBasicHistogram, binMin, binMax, slideStep)
 }
 \arguments{
-\item{myBasicHistogram,}{a ggiv histogram such as ggvis(mydf, x = ~xcolumn, fill := "gray")
+\item{myBasicHistogram}{a ggiv histogram such as ggvis(mydf, x = ~xcolumn, fill := "gray")
 binMin number, the minimum bin width for the histogram
 binMax number, the maximum bin width for the histogram
 slideStep number, the increment the slider should change with each movement}
