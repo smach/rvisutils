@@ -2,4 +2,5 @@
 
 export(corrvis)
 export(df_to_xts)
+export(grouped_barchart)
 export(interactive_histogram)
