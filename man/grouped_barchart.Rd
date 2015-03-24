@@ -14,20 +14,24 @@ fillcolnum integer Data frame column you want bars colored by
 mytitle character string optional headline for graph}
 }
 \description{
+This is a very thin wrapper around ggplot2 for creating bar charts,
+mainly because I find it difficult to remember stat=
+identity", position="dodge" and otherpreferences.
+}
+\details{
 Graph format from the R Graphics Cookbook by Winston Chang.
 Idea for using ggplot2 within another function from StackOverflow
 http://stackoverflow.com/a/27462105/718150
 }
 \examples{
-Initial graph from R Cookbook
-http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/
+# Initial graph from R Cookbook
+# http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/
 dat1 <- data.frame(
 sex = factor(c("Female","Female","Male","Male")),
 time = factor(c("Lunch","Dinner","Lunch","Dinner"), levels=c("Lunch","Dinner")),
 total_bill = c(13.53, 16.81, 16.24, 17.42)
 )
-p <- grouped_barchart(dat1, 2, 3, 1, "Test graph")
-print(p)
+grouped_barchart(dat1, 2, 3, 1, "Test graph")
 }
 \keyword{bar}
 \keyword{chart}

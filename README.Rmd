@@ -54,7 +54,11 @@ mydata %>%
 ```
 These can be saved to static images.
 
-**Complex static charts** -- ggplot2. There are lots of examples in the [ggplot2 documentation](http://docs.ggplot2.org/current/). Also see the [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/index.html) , the [R Graph Catalog](http://shinyapps.stat.ubc.ca/r-graph-catalog/). For info on tweaking graphs beyond the type, check [this cheat sheet](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/).
+**Complex static charts** -- ggplot2. This package includes 2 thin wrappers for creating barcharts: 
+basic_barchart() 
+grouped_barchart().
+
+There are many other things to be done with ggplot. See examples in the [ggplot2 documentation](http://docs.ggplot2.org/current/). Also check out the [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/index.html) and the [R Graph Catalog](http://shinyapps.stat.ubc.ca/r-graph-catalog/). For info on tweaking graphs beyond the type, check [this cheat sheet](http://zevross.com/blog/2014/08/04/beautiful-plotting-in-r-a-ggplot2-cheatsheet-3/).
 
 
 **Publish interactive versions of ggplot2 visualization on the Web** -- [plotly](https://plot.ly/ggplot2/).
