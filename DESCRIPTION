@@ -12,6 +12,7 @@ Imports:
     ggvis,
     shiny,
     xts,
-    ggplot2
+    ggplot2,
+    grid
 License: GPL-3
 LazyData: TRUE

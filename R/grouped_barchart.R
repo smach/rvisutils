@@ -18,7 +18,6 @@
 #' @keywords ggplot2, bar chart
 #' @export
 #' @examples
-
 #' # Initial graph from R Cookbook
 #' # http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/
 #' dat1 <- data.frame(
@@ -34,6 +33,7 @@ grouped_barchart <- function(mydf, xcolnum, ycolnum, fillcolnum, mytitle=""){
   # graph format from the R Graphics Cookbook by Winston Chang
   # idea for using ggplot2 within another function from StackOverflow
   # http://stackoverflow.com/a/15323436/718150
+  library(ggplot2)
   x <- names(mydf)[xcolnum]
   y <- names(mydf)[ycolnum]
   fill <- names(mydf)[fillcolnum]

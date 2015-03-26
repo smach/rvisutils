@@ -71,3 +71,17 @@ dataviz <- gvisCalendar(mydata, datevar="mydate", numvar="myvalue",
                   options=list(title="myheadline",
                                width = 1000, height = 8000))
 ```
+
+**HTML point graphs, grouped** -- rcdimple. Sample code:
+
+``` r
+dimple(
+   ycolname~xcolname,
+   groups = c("Group1","Group2"),
+   data = mydata,
+   type = "bubble"
+   ) %>%
+  xAxis( type = "addMeasureAxis" ) %>%
+  yAxis( type = "addMeasureAxis" ) %>%
+  add_legend()
+```
