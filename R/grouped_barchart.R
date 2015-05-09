@@ -8,14 +8,14 @@
 #' Idea for using ggplot2 within another function from StackOverflow
 #' http://stackoverflow.com/a/27462105/718150
 #'
-#' @param
-#' mydf A data frame
-#' xcolnum integer Data frame column number you want on the x axis
-#' ycolnum integer Data frame column you want on the y axis
-#' fillcolnum integer Data frame column you want bars colored by
-#' mytitle character string optional headline for graph
+#' @param mydf A data frame
+#' @param xcolnum integer Data frame column number you want on the x axis
+#' @param ycolnum integer Data frame column you want on the y axis
+#' @param fillcolnum integer Data frame column you want bars colored by
+#' @param mytitle character string optional headline for graph
 #'
 #' @keywords ggplot2, bar chart
+#' @import ggplot2
 #' @export
 #' @examples
 #' # Initial graph from R Cookbook
