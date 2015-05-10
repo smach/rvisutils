@@ -21,7 +21,7 @@ To install, you will need to have the devtools package on your system (if you do
 
 ```{r, echo = TRUE, eval= FALSE}
 
-devtools::install_github("smach/rvisutils.R")
+devtools::install_github("smach/rvisutils")
 
 ```
 
